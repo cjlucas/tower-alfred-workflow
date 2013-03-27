@@ -1,9 +1,12 @@
 import fnmatch
+import os
 
 import alfred
 import tower
 
-BOOKMARKS_FILE = "/Users/chris/Library/Application Support/Tower/Bookmarks.plist"
+BOOKMARKS_FILE_STR = "~/Library/Application Support/Tower/Bookmarks.plist"
+
+BOOKMARKS_FILE = os.path.expanduser(BOOKMARKS_FILE_STR)
 
 
 def _get_fuzzy_query(term):
