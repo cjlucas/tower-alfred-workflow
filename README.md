@@ -10,6 +10,9 @@ The packaged workflow can be downloaded [here](https://github.com/cjlucas/tower-
 Changelog
 ---------
 
+- v1.1 (not yet released)
+  - enhancement: sort bookmarks in the same order as in Tower.app
+
 - v1.0 (March 26, 2013)
   - Initial release
 

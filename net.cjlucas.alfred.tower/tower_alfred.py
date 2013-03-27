@@ -31,7 +31,12 @@ def get_results(arg):
 
     results = fnmatch.filter(bookmark_names, _get_fuzzy_query(arg))
 
-    return [_get_bookmark_for_title(bookmarks, r) for r in results]
+    bookmarks_filtered = [_get_bookmark_for_title(bookmarks, r)
+                          for r in results]
+
+    bookmarks_filtered = \
+        sorted(bookmarks_filtered, key=lambda bm: bm.sort_order)
+    return bookmarks_filtered
 
 
 def get_items(arg):
@@ -39,7 +44,6 @@ def get_items(arg):
 
     items = []
 
-    attrib = {"uid": alfred.uid(0), "arg": "somethinghere"}
     for count, bookmark in enumerate(get_results(arg)):
         attrib = {"uid": alfred.uid(count),
                   "arg": bookmark.path}
