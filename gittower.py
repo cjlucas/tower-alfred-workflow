@@ -62,6 +62,7 @@ def parse_bookmarks_file(f=BOOKMARKS_FILE):
 
         for elem in bm_dict.getchildren():
             tag = elem.tag.lower()
+
             if tag == "key":
                 last_key = elem.text.lower()
             else:
