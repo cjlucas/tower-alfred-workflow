@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>net.cjlucas.alfred.gittower</string>
+	<string>net.cjlucas.alfred.tower</string>
 	<key>connections</key>
 	<dict>
 		<key>A754A7F8-D5B5-47F6-9C1A-C902ECEA9BDC</key>
@@ -41,9 +41,9 @@
 				<string>Searching Repositories...</string>
 				<key>script</key>
 				<string>import alfred
-import alfredgittower as tower
+import tower_alfred as ta
 
-xml = alfred.xml(tower.get_items("{query}"))
+xml = alfred.xml(ta.get_items("{query}"))
 alfred.write(xml)</string>
 				<key>title</key>
 				<string>Search for Tower Repositories...</string>

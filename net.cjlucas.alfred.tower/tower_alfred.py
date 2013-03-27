@@ -1,7 +1,7 @@
 import fnmatch
 
 import alfred
-import gittower
+import tower
 
 BOOKMARKS_FILE = "/Users/chris/Library/Application Support/Tower/Bookmarks.plist"
 
@@ -22,7 +22,7 @@ def _get_bookmark_for_title(bookmarks, title):
 def get_results(arg):
     """ Returns a list of Bookmark objects after a
     title search based on the given arg """
-    bookmarks = gittower.get_bookmarks(BOOKMARKS_FILE)
+    bookmarks = tower.get_bookmarks(BOOKMARKS_FILE)
 
     bookmark_names = [b.title.lower() for b in bookmarks]
 
