@@ -37,17 +37,14 @@ def get_items(arg):
 
     attrib = {"uid": alfred.uid(0), "arg": "somethinghere"}
     for count, bookmark in enumerate(get_results(arg)):
-        repo_title = bookmark.title
-        repo_path = bookmark.representedObject
-        icon = "CloneRepoIcon.png"
         attrib = {"uid": alfred.uid(count),
-                  "arg": repo_path}
+                  "arg": bookmark.path}
 
         items.append(alfred.Item(
             attributes=attrib,
-            title=repo_title,
-            subtitle=repo_path,
-            icon=icon)
+            title=bookmark.title,
+            subtitle=bookmark.path,
+            icon="CloneRepoIcon.png")
         )
 
     return items

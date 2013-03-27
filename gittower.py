@@ -7,10 +7,10 @@ BOOKMARKS_FILE = "/Users/chris/Library/Application Support/Tower/Bookmarks.plist
 class Bookmark(object):
     def __init__(self, **kwargs):
         self.uuid = kwargs.get("uuid", None)
-        self.childNodes = kwargs.get("childnodes", [])
-        self.isExpanded = kwargs.get("isexpanded", False)
-        self.representedObject = kwargs.get("representedobject", "")
-        self.sortingOrder = kwargs.get("sortingOrder", 1)
+        self.child_nodes = kwargs.get("childnodes", [])
+        self.isexpanded = kwargs.get("isexpanded", False)
+        self.path = kwargs.get("representedobject", "")
+        self.sort_order = kwargs.get("sortingOrder", 1)
         self.title = kwargs.get("title", "")
         self.type_ = kwargs.get("type", "")
 
