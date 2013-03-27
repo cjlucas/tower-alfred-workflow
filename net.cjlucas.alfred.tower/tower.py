@@ -1,8 +1,6 @@
 import os
 import xml.etree.ElementTree
 
-BOOKMARKS_FILE = "/Users/chris/Library/Application Support/Tower/Bookmarks.plist"
-
 
 class Bookmark(object):
     def __init__(self, **kwargs):
@@ -10,16 +8,16 @@ class Bookmark(object):
         self.child_nodes = kwargs.get("childnodes", [])
         self.isexpanded = kwargs.get("isexpanded", False)
         self.path = kwargs.get("representedobject", "")
-        self.sort_order = kwargs.get("sortingOrder", 1)
+        self.sort_order = kwargs.get("sortingorder", 1)
         self.title = kwargs.get("title", "")
         self.type_ = kwargs.get("type", "")
 
     def __repr__(self):
         return("<Bookmark(title=\"{0}\", representedobject=\"{1}\")>".format(
-               self.title, self.representedObject))
+               self.title, self.path))
 
 
-def get_bookmarks(f=BOOKMARKS_FILE):
+def get_bookmarks(f):
     bookmark_list = []
 
     if os.path.isfile(f):
@@ -47,7 +45,7 @@ def _process_elem_text(elem):
     return out
 
 
-def parse_bookmarks_file(f=BOOKMARKS_FILE):
+def parse_bookmarks_file(f):
     tree = xml.etree.ElementTree.parse(f)
     root = tree.getroot()
 
