@@ -11,11 +11,11 @@ Changelog
 ---------
 
 - v1.1 (not yet released)
-  - enhancement: sort bookmarks in the same order as in Tower.app
+  - improvement: sort bookmarks as they're sorted in Tower.app
 
 - v1.0 (March 26, 2013)
   - Initial release
 
 TODO
 ----
-- nothing yet
+- add ability to search against the dirs of the repos as well
