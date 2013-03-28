@@ -21,13 +21,15 @@ def get_results(arg):
 
     # alp.fuzzy_search() will break if query is ""
     if arg == "":
-        results = bookmarks
+        # only use sort_order when no arguments are given
+        # otherwise, we'll use alp's ranking system
+        results = sorted(bookmarks, key=lambda x: x.sort_order)
     else:
-        results = alp.fuzzy_search(arg, bookmarks, key=lambda x: x.title)
+        titles = alp.fuzzy_search(arg, bookmarks, key=lambda x: x.title)
+        paths = alp.fuzzy_search(arg, bookmarks, key=lambda x: x.path)
+        results = set(titles).union(set(paths))
 
-    bookmarks_filtered = \
-        sorted(results, key=lambda bm: bm.sort_order)
-    return bookmarks_filtered
+    return results
 
 
 def get_items(arg):
