@@ -1,13 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import json
-import time
-import subprocess
 import os
 import sys
 import plistlib
 import unicodedata
-import codecs
 
 
 gBundleID = None
@@ -25,7 +21,8 @@ def bundle():
         try:
             gBundleID = info["bundleid"]
         except KeyError:
-            raise Exception("Bundle ID not defined or readable from info.plist.")
+            raise Exception(
+                "Bundle ID not defined or readable from info.plist.")
     else:
         raise Exception("info.plist missing.")
 
@@ -55,7 +52,8 @@ def local(join=None):
 
 def cache(join=None):
     bundleID = bundle()
-    vPath = os.path.expanduser(os.path.join("~/Library/Caches/com.runningwithcrayons.Alfred-2/Workflow Data/", bundleID))
+    vPath = os.path.expanduser(os.path.join(
+        "~/Library/Caches/com.runningwithcrayons.Alfred-2/Workflow Data/", bundleID))
 
     if not os.path.exists(vPath):
         os.makedirs(vPath)
@@ -68,7 +66,8 @@ def cache(join=None):
 
 def storage(join=None):
     bundleID = bundle()
-    nvPath = os.path.expanduser(os.path.join("~/Library/Application Support/Alfred 2/Workflow Data/", bundleID))
+    nvPath = os.path.expanduser(os.path.join(
+        "~/Library/Application Support/Alfred 2/Workflow Data/", bundleID))
 
     if not os.path.exists(nvPath):
         os.makedirs(nvPath)
@@ -94,6 +93,9 @@ def writePlist(obj, path):
 
 
 def jsonLoad(path):
+    import json
+    import codecs
+
     if not os.path.isabs(path):
         path = storage(path)
 
@@ -109,6 +111,9 @@ def jsonLoad(path):
 
 
 def jsonDump(obj, path):
+    import json
+    import codecs
+
     if not os.path.isabs(path):
         path = storage(path)
 
@@ -117,6 +122,8 @@ def jsonDump(obj, path):
 
 
 def find(query):
+    import subprocess
+
     qString = "mdfind {0}".format(query)
     output = subprocess.check_output(qString, shell=True)
     returnList = output.split("\n")
@@ -126,7 +133,11 @@ def find(query):
 
 
 def log(s):
-    log_text = "[{0}: {1} ({2})]\n".format(bundle(), s, time.strftime("%Y-%m-%d-%H:%M:%S"))
+    import time
+    import codecs
+
+    log_text = "[{0}: {1} ({2})]\n".format(
+        bundle(), s, time.strftime("%Y-%m-%d-%H:%M:%S"))
     if not os.path.exists(local("debug.log")):
         with open(local("debug.log"), "w") as f:
             f.write("\n")
