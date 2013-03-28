@@ -23,7 +23,7 @@ def bundle():
     if os.path.exists(infoPath):
         info = plistlib.readPlist(infoPath)
         try:
-            bundleID = info["bundleid"]
+            gBundleID = info["bundleid"]
         except KeyError:
             raise Exception("Bundle ID not defined or readable from info.plist.")
     else:
