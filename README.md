@@ -10,8 +10,9 @@ The packaged workflow can be downloaded [here](https://github.com/cjlucas/tower-
 Changelog
 ---------
 
-- v1.1 (not yet released)
+- v1.1 (March 27, 2013)
   - improvement: sort bookmarks as they're sorted in Tower.app
+  - improvement: search repository paths in addition to bookmark names
 
 - v1.0 (March 26, 2013)
   - Initial release
