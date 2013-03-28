@@ -1,5 +1,9 @@
 import os
-import xml.etree.ElementTree
+try:
+    # cElementTree only available in 2.5+
+    import xml.etree.cElementTree as ET
+except:
+    import xml.etree.ElementTree as ET
 
 
 class Bookmark(object):
@@ -46,7 +50,7 @@ def _process_elem_text(elem):
 
 
 def parse_bookmarks_file(f):
-    tree = xml.etree.ElementTree.parse(f)
+    tree = ET.parse(f)
     root = tree.getroot()
 
     if len(root.getchildren()) == 0 or root.getchildren()[0].tag != "dict":

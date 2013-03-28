@@ -1,16 +1,21 @@
 # -*- coding: utf-8 -*-
 
-from xml.etree import ElementTree as ET
 import copy
 import random
 import alp.core as core
+try:
+    # cElementTree only available in 2.5+
+    import xml.etree.cElementTree as ET
+except:
+    import xml.etree.ElementTree as ET
 
 
 class Item(object):
     def __init__(self, **kwargs):
         self.title = kwargs.pop("title", "")
         self.subtitle = kwargs.pop("subtitle", "")
-        self.uid = kwargs.pop("uid", "{0}.{1}".format(core.bundle(), random.getrandbits(40)))
+        self.uid = kwargs.pop("uid", "{0}.{1}".format(
+            core.bundle(), random.getrandbits(40)))
         if "valid" in kwargs.keys():
             if kwargs["valid"] == True:
                 self.valid = "yes"
@@ -54,9 +59,10 @@ class Item(object):
 
         return data
 
+
 def feedback(items):
     feedback = ET.Element("items")
-    
+
     def processItem(item):
         itemToAdd = ET.SubElement(feedback, "item")
 
