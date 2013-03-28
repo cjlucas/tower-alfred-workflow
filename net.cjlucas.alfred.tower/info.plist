@@ -40,11 +40,12 @@
 				<key>runningsubtext</key>
 				<string>Searching Repositories...</string>
 				<key>script</key>
-				<string>import alfred
+				<string>import alp
 import tower_alfred as ta
 
-xml = alfred.xml(ta.get_items("{query}"))
-alfred.write(xml)</string>
+items = ta.get_items("{query}")
+
+alp.feedback(items)</string>
 				<key>title</key>
 				<string>Search for Tower Repositories...</string>
 				<key>type</key>

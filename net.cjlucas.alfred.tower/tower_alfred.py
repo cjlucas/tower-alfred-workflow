@@ -1,7 +1,7 @@
 import fnmatch
 import os
 
-import alfred
+import alp
 import tower
 
 BOOKMARKS_FILE_STR = "~/Library/Application Support/Tower/Bookmarks.plist"
@@ -45,13 +45,10 @@ def get_items(arg):
     items = []
 
     for count, bookmark in enumerate(get_results(arg)):
-        attrib = {"uid": alfred.uid(count),
-                  "arg": bookmark.path}
-
-        items.append(alfred.Item(
-            attributes=attrib,
+        items.append(alp.Item(
             title=bookmark.title,
             subtitle=bookmark.path,
+            arg=bookmark.path,
             icon="CloneRepoIcon.png")
         )
 
