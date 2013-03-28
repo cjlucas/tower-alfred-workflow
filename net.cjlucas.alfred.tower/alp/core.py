@@ -3,7 +3,6 @@
 import os
 import sys
 import plistlib
-import unicodedata
 
 
 gBundleID = None
@@ -38,6 +37,8 @@ def args():
 
 
 def decode(s):
+    import unicodedata
+
     return unicodedata.normalize("NFC", s.decode("utf-8"))
 
 
