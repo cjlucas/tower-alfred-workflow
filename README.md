@@ -19,4 +19,4 @@ Changelog
 
 TODO
 ----
-- add ability to search against the dirs of the repos as well
+- none
