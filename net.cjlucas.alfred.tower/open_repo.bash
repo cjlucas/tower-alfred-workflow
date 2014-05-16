@@ -8,9 +8,7 @@ fi
 
 GITTOWER_PATH="$TOWER_PATH/Contents/MacOS/gittower"
 
-# query comes from the arg key in the selected item attributes
-query="{query}"
-
+# $1 is set by the "Run Script" action
 args="-s $1"
 
 eval $GITTOWER_PATH $args
