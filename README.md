@@ -10,6 +10,9 @@ The packaged workflow can be downloaded [here](https://github.com/cjlucas/tower-
 Changelog
 ---------
 
+- v1.3 (May 16, 2014)
+  - Added support for finding Tower.app in subdirectories of /Applications
+
 - v1.2 (March 29, 2013)
   - [alleyoop](http://www.alfredforum.com/topic/1582-alleyoop-update-alfred-workflows/) support
   - speed improvements
