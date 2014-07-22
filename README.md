@@ -10,6 +10,10 @@ The packaged workflow can be downloaded [here](https://github.com/cjlucas/tower-
 Changelog
 ---------
 
+- v2.0 (July 22, 2014)
+  - Added support for Tower 2
+  - Removed support for Tower 1
+
 - v1.3 (May 16, 2014)
   - Added support for finding Tower.app in subdirectories of /Applications
 
