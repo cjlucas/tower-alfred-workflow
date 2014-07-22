@@ -17,7 +17,7 @@ class Bookmark(object):
         self.type_ = kwargs.get("type", "")
 
     def __repr__(self):
-        return("<Bookmark(title=\"{0}\", representedobject=\"{1}\")>".format(
+        return("<Bookmark(title=\"{0}\", path=\"{1}\")>".format(
                self.title, self.path))
 
 
