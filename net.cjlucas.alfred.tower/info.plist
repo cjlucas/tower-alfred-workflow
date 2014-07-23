@@ -10,11 +10,51 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>94A3BFF2-ADDA-458C-8785-4F209222C2D3</string>
+				<key>modifiers</key>
+				<integer>8388608</integer>
+				<key>modifiersubtext</key>
+				<string>Copy to Clipboard</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>03C80328-38D8-4EE0-BC32-3C761B51D562</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>10D68F9C-94F9-45DF-9CBA-2803F8242ACE</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Browse in Alfred {query}</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8C38FC1C-14BE-43D0-89F9-E74F1F6BD57D</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Reveal in Finder</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4FD6C097-056C-4977-B65B-26BEFAF87AB8</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Open in Terminal</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>88B45EAA-19B5-4B0E-8445-D92306AB1C84</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Open in Sublime Text</string>
 			</dict>
 		</array>
 	</dict>
@@ -31,12 +71,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>94A3BFF2-ADDA-458C-8785-4F209222C2D3</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>keyword</key>
-				<string>tower</string>
+				<string>tw</string>
 				<key>runningsubtext</key>
 				<string>Searching Repositories...</string>
 				<key>script</key>
@@ -77,12 +132,87 @@ alp.feedback(items)</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict/>
+			<key>type</key>
+			<string>alfred.workflow.action.browseinalfred</string>
+			<key>uid</key>
+			<string>10D68F9C-94F9-45DF-9CBA-2803F8242ACE</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.action.revealfile</string>
+			<key>uid</key>
+			<string>8C38FC1C-14BE-43D0-89F9-E74F1F6BD57D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>cd {query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>4FD6C097-056C-4977-B65B-26BEFAF87AB8</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/Sublime Text.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>88B45EAA-19B5-4B0E-8445-D92306AB1C84</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
 		<key>03C80328-38D8-4EE0-BC32-3C761B51D562</key>
+		<dict>
+			<key>ypos</key>
+			<real>80</real>
+		</dict>
+		<key>10D68F9C-94F9-45DF-9CBA-2803F8242ACE</key>
+		<dict>
+			<key>ypos</key>
+			<real>200</real>
+		</dict>
+		<key>4FD6C097-056C-4977-B65B-26BEFAF87AB8</key>
+		<dict>
+			<key>ypos</key>
+			<real>460</real>
+		</dict>
+		<key>88B45EAA-19B5-4B0E-8445-D92306AB1C84</key>
+		<dict>
+			<key>ypos</key>
+			<real>600</real>
+		</dict>
+		<key>8C38FC1C-14BE-43D0-89F9-E74F1F6BD57D</key>
+		<dict>
+			<key>ypos</key>
+			<real>330</real>
+		</dict>
+		<key>94A3BFF2-ADDA-458C-8785-4F209222C2D3</key>
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
