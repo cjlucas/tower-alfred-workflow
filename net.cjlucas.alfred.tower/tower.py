@@ -73,6 +73,8 @@ def parse_bookmarks_file(f):
 
         entry_kv = _parse_dict_entry(entry)
         entry_name = entry_kv["name"]
+        if 'fileurl' not in entry_kv.keys():
+            continue
         entry_path = entry_kv["fileurl"][7:] # strip file://
         entry_sort_order += 1
 
