@@ -7,14 +7,10 @@ except:
 
 
 class Bookmark(object):
-    def __init__(self, **kwargs):
-        self.uuid = kwargs.get("uuid", None)
-        self.child_nodes = kwargs.get("childnodes", [])
-        self.isexpanded = kwargs.get("isexpanded", False)
-        self.path = kwargs.get("representedobject", "")
-        self.sort_order = kwargs.get("sortingorder", 1)
-        self.title = kwargs.get("title", "")
-        self.type_ = kwargs.get("type", "")
+    def __init__(self, title, path, sort_order):
+        self.title = title
+        self.path = path
+        self.sort_order = sort_order
 
     def __repr__(self):
         return("<Bookmark(title=\"{0}\", path=\"{1}\")>".format(
@@ -48,26 +44,36 @@ def _process_elem_text(elem):
 
     return out
 
+def _parse_dict_entry(elem):
+    entry_kv = {}
+    last_key = None
+
+    for elem in elem.getchildren():
+        tag = elem.tag.lower()
+
+        if tag == "key":
+            last_key = elem.text.lower()
+        else:
+            entry_kv[last_key] = _process_elem_text(elem)
+
+    return entry_kv
+
 
 def parse_bookmarks_file(f):
     tree = ET.parse(f)
     root = tree.getroot()
 
-    if len(root.getchildren()) == 0 or root.getchildren()[0].tag != "dict":
-        return
+    root_dict = root.find("dict")
+    entries = root_dict.find("array")
 
-    bm_contain = root.getchildren()[0]
+    entry_sort_order = 0
+    for entry in entries.getchildren():
+        if entry.tag != "dict":
+            continue
 
-    for bm_dict in bm_contain.findall("dict"):
-        bm_kw = {}
-        last_key = ""
+        entry_kv = _parse_dict_entry(entry)
+        entry_name = entry_kv["name"]
+        entry_path = entry_kv["fileurl"][7:] # strip file://
+        entry_sort_order += 1
 
-        for elem in bm_dict.getchildren():
-            tag = elem.tag.lower()
-
-            if tag == "key":
-                last_key = elem.text.lower()
-            else:
-                bm_kw[last_key] = _process_elem_text(elem)
-
-        yield Bookmark(**bm_kw)
+        yield Bookmark(entry_name, entry_path, entry_sort_order)

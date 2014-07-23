@@ -3,7 +3,7 @@ import os
 import alp
 import tower
 
-BOOKMARKS_FILE_STR = "~/Library/Application Support/Tower/Bookmarks.plist"
+BOOKMARKS_FILE_STR = "~/Library/Application Support/com.fournova.Tower2/bookmarks.plist"
 
 BOOKMARKS_FILE = os.path.expanduser(BOOKMARKS_FILE_STR)
 
@@ -39,7 +39,7 @@ def get_items(arg):
 
     for count, bookmark in enumerate(get_results(arg)):
         items.append(alp.Item(
-            title=bookmark.title,
+            title=bookmark.name,
             subtitle=bookmark.path,
             arg=bookmark.path,
             icon="CloneRepoIcon.png")
