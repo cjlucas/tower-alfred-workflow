@@ -39,7 +39,7 @@ def get_items(arg):
 
     for count, bookmark in enumerate(get_results(arg)):
         items.append(alp.Item(
-            title=bookmark.name,
+            title=bookmark.title,
             subtitle=bookmark.path,
             arg=bookmark.path,
             icon="CloneRepoIcon.png")
