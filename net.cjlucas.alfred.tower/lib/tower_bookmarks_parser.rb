@@ -51,8 +51,6 @@ module TowerWorkflow
     def get_bookmarks
       @parsed ||= parse
 
-      require 'awesome_print'
-      ap @parsed
       process_parsed_data(@parsed)
     end
 
