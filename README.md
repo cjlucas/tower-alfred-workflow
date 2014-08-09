@@ -1,7 +1,8 @@
-tower-alfred-workflow
+tower-alfred-workflow [![Build Status](https://travis-ci.org/cjlucas/tower-alfred-workflow.svg?branch=ruby-rewrite)](https://travis-ci.org/cjlucas/tower-alfred-workflow)
 =====================
 
 An Alfred workflow for searching/opening Tower git repositories
+
 
 ![Image alt](https://raw.github.com/cjlucas/tower-alfred-workflow/master/screenshot.png)
 
