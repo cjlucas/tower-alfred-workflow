@@ -44,6 +44,15 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.0.0-p353 [tower-alfred-workflow]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.6.5, RVM: ruby-2.0.0-p353 [tower-alfred-workflow]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, RVM: ruby-2.0.0-p353 [tower-alfred-workflow]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="fuzzy_match (v2.1.0, RVM: ruby-2.0.0-p353 [tower-alfred-workflow]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v10.3.2, RVM: ruby-2.0.0-p353 [tower-alfred-workflow]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec (v3.0.0, RVM: ruby-2.0.0-p353 [tower-alfred-workflow]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.0.3, RVM: ruby-2.0.0-p353 [tower-alfred-workflow]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.0.3, RVM: ruby-2.0.0-p353 [tower-alfred-workflow]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.0.3, RVM: ruby-2.0.0-p353 [tower-alfred-workflow]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.0.3, RVM: ruby-2.0.0-p353 [tower-alfred-workflow]) [gem]" level="application" />
   </component>
 </module>
 

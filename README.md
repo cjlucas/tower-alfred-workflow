@@ -3,13 +3,15 @@ tower-alfred-workflow [![Build Status](https://travis-ci.org/cjlucas/tower-alfre
 
 An Alfred workflow for searching/opening Tower git repositories
 
-
 ![Image alt](https://raw.github.com/cjlucas/tower-alfred-workflow/master/screenshot.png)
 
 The packaged workflow can be downloaded [here](https://github.com/cjlucas/tower-alfred-workflow/raw/master/tower-alfred-workflow.alfredworkflow).
 
 Changelog
 ---------
+
+- v2.1 (August 10, 2014)
+  - Folder support
 
 - v2.0 (July 22, 2014)
   - Added support for Tower 2
