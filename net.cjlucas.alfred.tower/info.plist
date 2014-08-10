@@ -40,16 +40,17 @@
 				<key>runningsubtext</key>
 				<string>Searching Repositories...</string>
 				<key>script</key>
-				<string>import alp
-import tower_alfred as ta
+				<string>$LOAD_PATH.insert(0, 'lib')
 
-items = ta.get_items("{query}")
+require 'tower_workflow'
 
-alp.feedback(items)</string>
+BOOKMARKS_PATH = "~/Library/Application Support/com.fournova.Tower2/bookmarks.plist"
+
+TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query("{query}")</string>
 				<key>title</key>
 				<string>Search for Tower Repositories...</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>2</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
