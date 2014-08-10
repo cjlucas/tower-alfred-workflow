@@ -12,18 +12,24 @@ module TowerWorkflow
 
     def <<(object)
       if object.is_a?(Folder)
-        @sub_folders << object
+        sub_folders << object
       elsif object.is_a?(Repository)
-        @repositories << object
+        repositories << object
       end
     end
 
+    def all_repositories
+      repos = repositories.dup
+      sub_folders.each { |folder| repos += folder.all_repositories }
+      repos
+    end
+
     def has_folder?(folder_name)
-      !@sub_folders.select { |folder| folder.name.eql?(folder_name) }.empty?
+      !sub_folders.select { |folder| folder.name.eql?(folder_name) }.empty?
     end
 
     def has_repository?(repository_name)
-      !@repositories.select { |repo| repo.name.eql?(repository_name)}.empty?
+      !repositories.select { |repo| repo.name.eql?(repository_name)}.empty?
     end
   end
 

@@ -44,7 +44,7 @@ describe TowerWorkflow::BookmarksParser do
     end
 
     it 'should contain all repositories' do
-      expect(@bookmarks.repositories_named('Default Folder, Repo 1').size).to eq(1)
+      expect(@bookmarks.has_repository?('Default Folder, Repo 1')).to be_truthy
 
       folder = @bookmarks.folders_named('Folder 1').first
       expect(folder.has_repository?('Folder 1, Repo 1')).to be_truthy
