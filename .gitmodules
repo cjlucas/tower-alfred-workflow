@@ -1,6 +1,6 @@
 [submodule "net.cjlucas.alfred.tower/vendor/alfredlite"]
 	path = net.cjlucas.alfred.tower/vendor/alfredlite
-	url = git@github.com:cjlucas/ruby-alfredlite.git
+	url = https://github.com/cjlucas/ruby-alfredlite.git
 [submodule "net.cjlucas.alfred.tower/vendor/fuzzy_match"]
 	path = net.cjlucas.alfred.tower/vendor/fuzzy_match
 	url = https://github.com/seamusabshere/fuzzy_match.git
