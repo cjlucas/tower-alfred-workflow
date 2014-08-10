@@ -1,15 +1,5 @@
 require_relative 'spec_helper'
 
-RSpec::Matchers.define :contain_repository_named do |repo_name|
-  match do |actual|
-    !actual.select { |repo| repo.name.eql?(repo_name) }.empty?
-  end
-
-  failure_message do |actual|
-    "#{actual} did not contain a repository named #{repo_name}"
-  end
-end
-
 describe TowerWorkflow::Folder do
   context 'with nested folders' do
     before(:all) do
