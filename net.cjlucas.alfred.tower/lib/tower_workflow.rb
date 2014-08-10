@@ -1,4 +1,4 @@
-require_relative '../bundle/bundler/setup'
+require_relative '../vendor/setup'
 
 require 'alfredlite'
 require 'alfredlite/feedback'
