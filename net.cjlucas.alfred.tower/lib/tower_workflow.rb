@@ -27,14 +27,14 @@ module TowerWorkflow
     def query(query = nil)
       find_repos(query).each do |repo|
         feedback_items << Alfred::Feedback::Item.new.tap do |item|
-          item.title = repo.name
-          item.subtitle = repo.location
+          item.add_title(repo.name)
+          item.add_subtitle(repo.location)
           item.arg = repo.location
-          item.icon = REPO_ICON
+          item.add_icon(REPO_ICON)
         end
       end
 
-      feedback_xml.write
+      send_feedback!
     end
   end
 end
