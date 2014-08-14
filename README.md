@@ -16,6 +16,7 @@ Changelog
     - Reveal in Finder (shift)
     - Open in Terminal (alt)
     - Copy to Clipboard (fn)
+  - Dropped support for Mountain Lion
 
 - v2.1 (August 10, 2014)
   - Folder support
