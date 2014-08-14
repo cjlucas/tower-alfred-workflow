@@ -10,6 +10,13 @@ The packaged workflow can be downloaded [here](https://github.com/cjlucas/tower-
 Changelog
 ---------
 
+- v2.2 (August 14, 2014)
+  - Added support for modifier keys
+    - Browse in Alfred (cmd)
+    - Reveal in Finder (shift)
+    - Open in Terminal (alt)
+    - Copy to Clipboard (fn)
+
 - v2.1 (August 10, 2014)
   - Folder support
 
@@ -33,4 +40,4 @@ Changelog
 
 TODO
 ----
-- none
+- Add support for opening in external editor
