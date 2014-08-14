@@ -16,6 +16,38 @@
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B5E27481-9543-4E02-B01C-D9B5B4FE75F6</string>
+				<key>modifiers</key>
+				<integer>8388608</integer>
+				<key>modifiersubtext</key>
+				<string>Copy Path to Clipboard</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>AA6F2EF6-B1BE-43B4-AE17-6119392DEA39</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Blah</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7BFB7DFF-8087-4BAC-9405-F31EEBAAC8B4</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Reveal in Finder</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>BA515E70-333F-486D-A553-84A2E3D77444</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Open in Terminal</string>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -28,6 +60,48 @@
 	<string>Tower Repositories</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>bash open_repo.bash {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>03C80328-38D8-4EE0-BC32-3C761B51D562</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>B5E27481-9543-4E02-B01C-D9B5B4FE75F6</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict/>
+			<key>type</key>
+			<string>alfred.workflow.action.browseinalfred</string>
+			<key>uid</key>
+			<string>AA6F2EF6-B1BE-43B4-AE17-6119392DEA39</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -62,19 +136,25 @@ TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query("{query}")</string>
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.action.revealfile</string>
+			<key>uid</key>
+			<string>7BFB7DFF-8087-4BAC-9405-F31EEBAAC8B4</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>script</key>
-				<string>bash open_repo.bash {query}</string>
-				<key>type</key>
-				<integer>0</integer>
+				<string>cd {query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
-			<string>03C80328-38D8-4EE0-BC32-3C761B51D562</string>
+			<string>BA515E70-333F-486D-A553-84A2E3D77444</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -88,10 +168,30 @@ TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query("{query}")</string>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
+		<key>7BFB7DFF-8087-4BAC-9405-F31EEBAAC8B4</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
 		<key>A754A7F8-D5B5-47F6-9C1A-C902ECEA9BDC</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>190</real>
+		</dict>
+		<key>AA6F2EF6-B1BE-43B4-AE17-6119392DEA39</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>B5E27481-9543-4E02-B01C-D9B5B4FE75F6</key>
+		<dict>
+			<key>ypos</key>
+			<real>30</real>
+		</dict>
+		<key>BA515E70-333F-486D-A553-84A2E3D77444</key>
+		<dict>
+			<key>ypos</key>
+			<real>370</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
