@@ -30,7 +30,7 @@
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Blah</string>
+				<string>Browse in Alfred</string>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
