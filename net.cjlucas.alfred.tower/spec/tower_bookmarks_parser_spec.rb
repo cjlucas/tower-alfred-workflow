@@ -56,4 +56,15 @@ describe TowerWorkflow::BookmarksParser do
       expect(folder.has_repository?('Folder 2, Repo 2')).to be_truthy
     end
   end
+
+  context 'when repository path contains escaped characters' do
+    before(:all) do
+      bookmarks_file = data_file('bookmarks_repo_path_escaped_characters.xml')
+      @bookmarks = described_class.get_bookmarks(bookmarks_file)
+    end
+    it 'should decode the path properly' do
+      repo = @bookmarks.all_repositories.first
+      expect(repo.location).to eql('/Users/example/Projects/Some Project/')
+    end
+  end
 end

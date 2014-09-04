@@ -1,4 +1,5 @@
 require 'rexml/document'
+require 'uri'
 
 module TowerWorkflow
   class Folder
@@ -70,6 +71,8 @@ module TowerWorkflow
 
     def process_parsed_hash(hash, current_folder)
       if valid_repository?(hash)
+        file_uri = URI.parse(hash['fileurl'])
+        hash['fileurl'] = URI.unescape(file_uri.path)
         current_folder << repository_from_hash(hash)
       elsif folder?(hash)
         folder = folder_from_hash(hash)
@@ -87,7 +90,7 @@ module TowerWorkflow
     end
 
     def repository_from_hash(hash)
-      Repository.new(hash['name'], hash['fileurl'][7, hash['fileurl'].length])
+      Repository.new(hash['name'], hash['fileurl'])
     end
 
     def folder_from_hash(hash)
