@@ -10,6 +10,11 @@ The packaged workflow can be downloaded [here](https://github.com/cjlucas/tower-
 Changelog
 ---------
 
+- v2.3 (September 4, 2014)
+  - Removed support for Ruby 1.9.3 (not installed by default on version of OS X)
+  - Fixed typo in modifier key description (#7)
+  - Fixed bug that failed to open repositories with paths that contain spaces (#8)
+
 - v2.2 (August 14, 2014)
   - Added support for modifier keys
     - Browse in Alfred (cmd)
