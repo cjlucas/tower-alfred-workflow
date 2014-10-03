@@ -11,4 +11,4 @@ GITTOWER_PATH="$TOWER_PATH/Contents/MacOS/gittower"
 # $1 is set by the "Run Script" action
 args="$1"
 
-eval $GITTOWER_PATH $args
+eval "'$GITTOWER_PATH'" $args
