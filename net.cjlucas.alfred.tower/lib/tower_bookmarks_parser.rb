@@ -86,7 +86,7 @@ module TowerWorkflow
     end
 
     def folder?(hash)
-      hash.size == 2 && hash.has_key?('children') && hash.has_key?('name')
+      hash.has_key?('children') && hash.has_key?('name')
     end
 
     def repository_from_hash(hash)
