@@ -10,6 +10,8 @@ The packaged workflow can be downloaded [here](https://github.com/cjlucas/tower-
 Changelog
 ---------
 
+- 2.5 (December 30, 2015)
+  - Added support for Tower 2.3.1+ (#12)
 - v2.4 (August 9, 2015)
   - Fixed a bug which caused folder support to break (#11)
 
