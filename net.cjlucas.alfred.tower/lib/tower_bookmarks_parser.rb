@@ -82,7 +82,7 @@ module TowerWorkflow
     end
 
     def valid_repository?(hash)
-      hash.has_key?('filereferenceurl') && hash.has_key?('fileurl')
+      hash.has_key?('fileurl')
     end
 
     def folder?(hash)
