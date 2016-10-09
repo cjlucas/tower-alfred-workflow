@@ -2,84 +2,108 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>children</key>
-    <array>
-        <dict>
-            <key>children</key>
-            <array/>
-            <key>fileReferenceURL</key>
-            <string>file:///.file/id=6571367.25689521/</string>
-            <key>fileURL</key>
-            <string>file:///Users/example/Projects/fdr1/</string>
-            <key>name</key>
-            <string>Default Folder, Repo 1</string>
-        </dict>
-        <dict>
-            <key>children</key>
-            <array>
-                <dict>
-                    <key>children</key>
-                    <array/>
-                    <key>fileReferenceURL</key>
-                    <string>file:///.file/id=6571367.12617003/</string>
-                    <key>fileURL</key>
-                    <string>file:///Users/example/Projects/f1r1/</string>
-                    <key>name</key>
-                    <string>Folder 1, Repo 1</string>
-                </dict>
-                <dict>
-                    <key>children</key>
-                    <array/>
-                    <key>fileReferenceURL</key>
-                    <string>file:///.file/id=6571367.16111997/</string>
-                    <key>fileURL</key>
-                    <string>file:///Users/example/Projects/f1r2/</string>
-                    <key>name</key>
-                    <string>Folder 1, Repo 2</string>
-                </dict>
-                <dict>
-                    <key>children</key>
-                    <array/>
-                    <key>fileReferenceURL</key>
-                    <string>file:///.file/id=6571367.16052211/</string>
-                    <key>fileURL</key>
-                    <string>file:///Users/example/Projects/f1r3/</string>
-                    <key>name</key>
-                    <string>Folder 1, Repo 3</string>
-                </dict>
-            </array>
-            <key>name</key>
-            <string>Folder 1</string>
-        </dict>
-        <dict>
-            <key>children</key>
-            <array>
-                <dict>
-                    <key>children</key>
-                    <array/>
-                    <key>fileReferenceURL</key>
-                    <string>file:///.file/id=6571367.24419031/</string>
-                    <key>fileURL</key>
-                    <string>file:///Users/example/Projects/f2r1/</string>
-                    <key>name</key>
-                    <string>Folder 2, Repo 1</string>
-                </dict>
-                <dict>
-                    <key>children</key>
-                    <array/>
-                    <key>fileReferenceURL</key>
-                    <string>file:///.file/id=6571367.13960352/</string>
-                    <key>fileURL</key>
-                    <string>file:///Users/example/f2r2/</string>
-                    <key>name</key>
-                    <string>Folder 2, Repo 2</string>
-                </dict>
-            </array>
-            <key>name</key>
-            <string>Folder 2</string>
-        </dict>
-    </array>
-    <key>name</key>
-    <string>Repositories</string>
+	<key>children</key>
+	<array>
+		<dict>
+			<key>fileURL</key>
+			<string>file:///Users/chris/Projects/fdr1/</string>
+			<key>lastOpenedDate</key>
+			<real>0.0</real>
+			<key>name</key>
+			<string>Default Folder, Repo 1</string>
+			<key>type</key>
+			<integer>2</integer>
+			<key>valid</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>fileURL</key>
+					<string>file:///Users/chris/Projects/f1r1/</string>
+					<key>lastOpenedDate</key>
+					<real>0.0</real>
+					<key>name</key>
+					<string>Folder 1, Repo 1</string>
+					<key>type</key>
+					<integer>2</integer>
+					<key>valid</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>fileURL</key>
+					<string>file:///Users/chris/Projects/f1r2/</string>
+					<key>lastOpenedDate</key>
+					<real>0.0</real>
+					<key>name</key>
+					<string>Folder 1, Repo 2</string>
+					<key>type</key>
+					<integer>2</integer>
+					<key>valid</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>fileURL</key>
+					<string>file:///Users/chris/Projects/f1r3/</string>
+					<key>lastOpenedDate</key>
+					<real>0.0</real>
+					<key>name</key>
+					<string>Folder 1, Repo 3</string>
+					<key>type</key>
+					<integer>2</integer>
+					<key>valid</key>
+					<true/>
+				</dict>
+			</array>
+			<key>expanded</key>
+			<false/>
+			<key>name</key>
+			<string>Folder 1</string>
+			<key>type</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>children</key>
+			<array>
+				<dict>
+					<key>fileURL</key>
+					<string>file:///Users/chris/Projects/f2r1/</string>
+					<key>lastOpenedDate</key>
+					<real>0.0</real>
+					<key>name</key>
+					<string>Folder 2, Repo 1</string>
+					<key>type</key>
+					<integer>2</integer>
+					<key>valid</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>fileURL</key>
+					<string>file:///Users/chris/Projects/f2r2/</string>
+					<key>lastOpenedDate</key>
+					<real>0.0</real>
+					<key>name</key>
+					<string>Folder 2, Repo 2</string>
+					<key>type</key>
+					<integer>2</integer>
+					<key>valid</key>
+					<true/>
+				</dict>
+			</array>
+			<key>expanded</key>
+			<false/>
+			<key>name</key>
+			<string>Folder 2</string>
+			<key>type</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>expanded</key>
+	<true/>
+	<key>name</key>
+	<string>Repositories</string>
+	<key>type</key>
+	<integer>3</integer>
 </dict>
 </plist>
