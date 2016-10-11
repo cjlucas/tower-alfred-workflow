@@ -25,6 +25,8 @@ module TowerWorkflow
     end
 
     def query(query = nil)
+      $stderr.puts %Q{Received query: "#{query}"}
+
       find_repos(query).each do |repo|
         feedback_items << Alfred::Feedback::Item.new.tap do |item|
           item.add_title(repo.name)
