@@ -19,6 +19,8 @@ module TowerWorkflow
       @repositories ||= BookmarksParser.get_bookmarks(@bookmarks_path) \
                         .all_repositories
 
+      $stderr.puts("All repositories: #{@repositories}")
+
       query.nil? || query.empty? \
       ? @repositories \
         : FuzzyMatch.new(@repositories, read: :name).find_all(query)
