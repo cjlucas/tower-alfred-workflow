@@ -2,5 +2,8 @@ language: ruby
 rvm:
   - 2.0
   - 2.1
+  - 2.2
+  - 2.3
 before_install:
+  - "make"
   - "cd net.cjlucas.alfred.tower"

@@ -19,12 +19,16 @@ module TowerWorkflow
       @repositories ||= BookmarksParser.get_bookmarks(@bookmarks_path) \
                         .all_repositories
 
+      $stderr.puts("All repositories: #{@repositories}")
+
       query.nil? || query.empty? \
       ? @repositories \
         : FuzzyMatch.new(@repositories, read: :name).find_all(query)
     end
 
     def query(query = nil)
+      $stderr.puts %Q{Received query: "#{query}"}
+
       find_repos(query).each do |repo|
         feedback_items << Alfred::Feedback::Item.new.tap do |item|
           item.add_title(repo.name)

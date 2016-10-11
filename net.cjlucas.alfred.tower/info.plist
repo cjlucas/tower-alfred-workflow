@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -23,6 +25,8 @@
 				<integer>8388608</integer>
 				<key>modifiersubtext</key>
 				<string>Copy Path to Clipboard</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -31,6 +35,8 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Browse in Alfred</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -39,6 +45,8 @@
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
 				<string>Reveal in Finder</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -47,6 +55,8 @@
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
 				<string>Open in Terminal</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -63,10 +73,16 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>script</key>
 				<string>bash open_repo.bash "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -75,7 +91,7 @@
 			<key>uid</key>
 			<string>03C80328-38D8-4EE0-BC32-3C761B51D562</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -84,33 +100,48 @@
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>B5E27481-9543-4E02-B01C-D9B5B4FE75F6</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
-			<dict/>
+			<dict>
+				<key>path</key>
+				<string></string>
+			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.browseinalfred</string>
 			<key>uid</key>
 			<string>AA6F2EF6-B1BE-43B4-AE17-6119392DEA39</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>keyword</key>
 				<string>tower</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
 				<key>runningsubtext</key>
 				<string>Searching Repositories...</string>
 				<key>script</key>
@@ -120,7 +151,13 @@ require 'tower_workflow'
 
 BOOKMARKS_PATH = "~/Library/Application Support/com.fournova.Tower2/bookmarks-v2.plist"
 
-TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query("{query}")</string>
+TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query(ARGV[0])</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Search for Tower Repositories...</string>
 				<key>type</key>
@@ -133,7 +170,7 @@ TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query("{query}")</string>
 			<key>uid</key>
 			<string>A754A7F8-D5B5-47F6-9C1A-C902ECEA9BDC</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -141,7 +178,7 @@ TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query("{query}")</string>
 			<key>uid</key>
 			<string>7BFB7DFF-8087-4BAC-9405-F31EEBAAC8B4</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -156,7 +193,7 @@ TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query("{query}")</string>
 			<key>uid</key>
 			<string>BA515E70-333F-486D-A553-84A2E3D77444</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -165,31 +202,43 @@ TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query("{query}")</string>
 	<dict>
 		<key>03C80328-38D8-4EE0-BC32-3C761B51D562</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>7BFB7DFF-8087-4BAC-9405-F31EEBAAC8B4</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
 		<key>A754A7F8-D5B5-47F6-9C1A-C902ECEA9BDC</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>190</real>
 		</dict>
 		<key>AA6F2EF6-B1BE-43B4-AE17-6119392DEA39</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>
 		<key>B5E27481-9543-4E02-B01C-D9B5B4FE75F6</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>30</real>
 		</dict>
 		<key>BA515E70-333F-486D-A553-84A2E3D77444</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>370</real>
 		</dict>
