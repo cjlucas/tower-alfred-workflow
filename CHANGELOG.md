@@ -1,5 +1,9 @@
+- 2.6 (October 10, 2016)
+  - Added support for Tower 2.5 (#14)
+
 - 2.5 (December 30, 2015)
   - Added support for Tower 2.3.1+ (#12)
+
 - v2.4 (August 9, 2015)
   - Fixed a bug which caused folder support to break (#11)
 
