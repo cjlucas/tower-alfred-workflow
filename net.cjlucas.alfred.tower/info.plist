@@ -149,7 +149,7 @@
 
 require 'tower_workflow'
 
-BOOKMARKS_PATH = "~/Library/Application Support/com.fournova.Tower2/bookmarks-v2.plist"
+BOOKMARKS_PATH = "~/Library/Application Support/com.fournova.Tower3/bookmarks-v2.plist"
 
 TowerWorkflow::Workflow.new(BOOKMARKS_PATH).query(ARGV[0])</string>
 				<key>scriptargtype</key>
